@@ -1,0 +1,14 @@
+services:
+  server:
+    image: haaragard/evrima-server:latest
+    volumes:
+      - server-data:/app
+      - ./configs/Game.ini:/app/TheIsle/Saved/Config/LinuxServer/Game.ini:rw
+      - ./configs/Engine.ini:/app/TheIsle/Saved/Config/LinuxServer/Engine.ini:rw
+    ports:
+      - "7777:7777/udp"
+      - "7777:7777/tcp"
+      - "10000:10000/tcp"
+      - "27015:27015/udp"
+volumes:
+  server-data:
