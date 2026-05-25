@@ -1,11 +1,13 @@
 #!/bin/bash
 
 echo "Iniciando atualizacao do jogo..."
-exec /home/steam/steamcmd/steamcmd.sh \
-+force_install_dir /app \
-+login anonymous \
-+app_update 412680 -beta evrima validate \
-+quit
+
+/home/steam/steamcmd/steamcmd.sh \
+    +force_install_dir /app \
+    +login anonymous \
+    +app_update "412680 -beta evrima validate" \
+    +quit
+
 echo "last update: $(date +"%Y-%m-%d %H:%M:%S")" >> /app/last_updated.txt
 echo "Atualizacao do jogo concluida!"
 
