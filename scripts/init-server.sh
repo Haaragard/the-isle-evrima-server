@@ -12,4 +12,8 @@ echo "last update: $(date +"%Y-%m-%d %H:%M:%S")" >> /app/last_updated.txt
 echo "Atualizacao do jogo concluida!"
 
 echo "Iniciando servidor..."
-exec /app/TheIsleServer.sh -MultiHome=0.0.0.0 -log
+exec /app/TheIsleServer.sh \
+    -MultiHome=0.0.0.0 \
+    -Port=7777 \
+    -QueryPort=27015 \
+    -log
