@@ -3,7 +3,9 @@ services:
     image: haaragard/evrima-server:latest
     restart: unless-stopped
     volumes:
-      - server-data:/app
+      - server_volume:/app
+      - steamcmd_volume:/home/steam/steamcmd
+      - steamcmd_login_volume:/home/steam/Steam
       - ./configs/Game.ini:/app/TheIsle/Saved/Config/LinuxServer/Game.ini:rw
       - ./configs/Engine.ini:/app/TheIsle/Saved/Config/LinuxServer/Engine.ini:rw
     ports:
@@ -11,4 +13,6 @@ services:
       - "10000:10000/tcp"
       - "27015:27015/udp"
 volumes:
-  server-data:
+  server_volume:
+  steamcmd_volume:
+  steamcmd_login_volume:

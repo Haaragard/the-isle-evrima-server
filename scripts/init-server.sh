@@ -3,6 +3,7 @@
 echo "Iniciando atualizacao do jogo..."
 
 /home/steam/steamcmd/steamcmd.sh \
+    +@sSteamCmdForcePlatformType linux \
     +force_install_dir /app \
     +login anonymous \
     +app_update "412680 -beta evrima validate" \
