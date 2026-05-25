@@ -6,7 +6,7 @@ echo "Iniciando atualizacao do jogo..."
     +@sSteamCmdForcePlatformType linux \
     +force_install_dir /app \
     +login anonymous \
-    +app_update "412680 -beta evrima validate" \
+    +app_update 412680 -beta evrima validate \
     +quit
 
 echo "last update: $(date +"%Y-%m-%d %H:%M:%S")" >> /app/last_updated.txt
