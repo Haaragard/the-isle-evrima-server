@@ -1,9 +1,5 @@
 FROM cm2network/steamcmd
 
-ENV STEAMCMD_HOME="/home/steam/steamcmd" \
-    STEAMCMD_SCRIPT="steamcmd.sh" \
-    STEAMCMD_ARGS="+force_install_dir /app +login anonymous +app_update 412680 -beta evrima validate +quit"
-
 WORKDIR /app
 
 COPY --chown=steam:steam configs/Game.ini /app/TheIsle/Saved/Config/LinuxServer/Game.ini
